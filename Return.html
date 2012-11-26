@@ -55,7 +55,7 @@ h1
 {
 	display:block;
 	color:cornsilk;
-	width:200px;
+	width:195px;
 	height:26px;
 	padding:0px;
 	margin:5px;
@@ -82,34 +82,42 @@ h1
 
 <br />
 
-<a class="menuButtons" href="https://userpages.umbc.edu/~nreed2/461/Rent.html">Rent</a>
+<a class="menuButtons" href="https://userpages.umbc.edu/~nreed2/461/Rent.php">Rent</a>
 
 <br />
 
-<a class="menuButtons" href="https://userpages.umbc.edu/~nreed2/461/Return.html">Return</a>
+<a class="menuButtons" href="https://userpages.umbc.edu/~nreed2/461/Return.php">Return</a>
 
 <br />
 
-<a class="menuButtons" href="https://userpages.umbc.edu/~nreed2/461/Add.html">Add</a>
+<a class="menuButtons" href="https://userpages.umbc.edu/~nreed2/461/Add.php">Add</a>
 
 <br />
 
-<a class="menuButtons" href="https://userpages.umbc.edu/~nreed2/461/Edit.html">Edit</a>
+<a class="menuButtons" href="https://userpages.umbc.edu/~nreed2/461/Edit.php">Edit</a>
 
 <br />
 
-<a class="menuButtons" href="https://userpages.umbc.edu/~nreed2/461/Delete.html">Delete</a>
+<a class="menuButtons" href="https://userpages.umbc.edu/~nreed2/461/Delete.php">Delete</a>
 
 <br />
 
-<a class="menuButtons" href="https://userpages.umbc.edu/~nreed2/461/Search.html">Search</a>
+<a class="menuButtons" href="https://userpages.umbc.edu/~nreed2/461/Search.php">Search</a>
 
 <br />
 
 </div>
 
 <div id="content">
-Return page
+
+<form name="input" action="getInfo.php" method="POST">
+
+What is the rental ID of the car being returned? <br>
+<input type="text" name="RentalID"><br>
+<input type="submit" value="Return">
+
+</form>
+
 </div>
 
 <div id="footer">
