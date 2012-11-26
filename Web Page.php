@@ -55,7 +55,7 @@ h1
 {
 	display:block;
 	color:cornsilk;
-	width:200px;
+	width:195px;
 	height:26px;
 	padding:0px;
 	margin:5px;
@@ -82,27 +82,27 @@ h1
 
 <br />
 
-<a class="menuButtons" href="https://userpages.umbc.edu/~nreed2/461/Rent.html">Rent</a>
+<a class="menuButtons" href="https://userpages.umbc.edu/~nreed2/461/Rent.php">Rent</a>
 
 <br />
 
-<a class="menuButtons" href="https://userpages.umbc.edu/~nreed2/461/Return.html">Return</a>
+<a class="menuButtons" href="https://userpages.umbc.edu/~nreed2/461/Return.php">Return</a>
 
 <br />
 
-<a class="menuButtons" href="https://userpages.umbc.edu/~nreed2/461/Add.html">Add</a>
+<a class="menuButtons" href="https://userpages.umbc.edu/~nreed2/461/Add.php">Add</a>
 
 <br />
 
-<a class="menuButtons" href="https://userpages.umbc.edu/~nreed2/461/Edit.html">Edit</a>
+<a class="menuButtons" href="https://userpages.umbc.edu/~nreed2/461/Edit.php">Edit</a>
 
 <br />
 
-<a class="menuButtons" href="https://userpages.umbc.edu/~nreed2/461/Delete.html">Delete</a>
+<a class="menuButtons" href="https://userpages.umbc.edu/~nreed2/461/Delete.php">Delete</a>
 
 <br />
 
-<a class="menuButtons" href="https://userpages.umbc.edu/~nreed2/461/Search.html">Search</a>
+<a class="menuButtons" href="https://userpages.umbc.edu/~nreed2/461/Search.php">Search</a>
 
 <br />
 
