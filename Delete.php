@@ -75,7 +75,7 @@ h1
 <div id="container">
 
 <div id="header">
-<h1><b>Add</b></h1>
+<h1><b>Delete</b></h1>
 </div>
 
 <div id="menu" >
@@ -109,7 +109,7 @@ h1
 </div>
 
 <div id="content">
-Add page
+Delete page
 </div>
 
 <div id="footer">

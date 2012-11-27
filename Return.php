@@ -75,7 +75,7 @@ h1
 <div id="container">
 
 <div id="header">
-<h1><b>Add</b></h1>
+<h1><b>Return</b></h1>
 </div>
 
 <div id="menu" >
@@ -109,7 +109,15 @@ h1
 </div>
 
 <div id="content">
-Add page
+
+<form name="input" action="getInfo.php" method="POST">
+
+What is the rental ID of the car being returned? <br>
+<input type="text" name="RentalID"><br>
+<input type="submit" value="Return">
+
+</form>
+
 </div>
 
 <div id="footer">
