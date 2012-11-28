@@ -1,22 +1,14 @@
 <?php
   if($_GET["msg"] == "userErr") {
-    print "User already exists";
+    print "Username can't be blank.";
   }else if($_GET["msg"] == "passMismatch") {
-      print "Passwords do not match";
+      print "Passwords do not match.";
+  }else if ($_GET["msg"] == "userExists") {
+    print "Username already exists.";
   }
-  $user = $_POST["username"];
-  $pass = $_POST["password"];
-  $retype = $_POST["retypedPassword"];
-  
-  $query = mysql_query("SELECT Username FROM user WHERE Username = '$user'") or die(mysql_error());
-  $data = mysql_fetch_assoc($query);
-
-  
-  
-  mysql_query("INSERT INTO user (Username, Password) VALUES ('$user', '$pass')") or die(mysql_error());
 ?>
 
-<form method="post" action="index.php?page=newUser">
+<form method="post" action="index.php?page=newUser&cmd=register">
     <input type="text" name="username" placeholder="username" />
     <br />
     <input type="password" name="password" placeholder="password" />

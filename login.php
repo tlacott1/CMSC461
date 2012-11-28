@@ -1,3 +1,9 @@
+<?php
+  if ($_GET["err"] == "err") {
+    print "There is a problem with the Username/Password.";
+  }
+?>
+
 <form method="post" action="index.php?page=login">
     <input type="text" name="username" placeholder="username" />
     <br />

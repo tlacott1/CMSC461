@@ -22,6 +22,9 @@
     case "newUser":
       require "newUser.php";
       break;
+    case "getInfo":
+      require "getInfo.php";
+      break;
     default:
       require "login.php";
       break;
