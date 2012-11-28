@@ -20,12 +20,12 @@ if ($_GET['page'] == "login") {
     $data = mysql_fetch_assoc($query);
 
     if (is_null($data["Username"])) {
-      header('Location: index.php?page=rent&err=err');
+      header('Location: index.php?err=err');
     } else if ($checkPass == $data["Password"]) {
       $_SESSION["username"] = $data["Username"];
       header('Location: index.php?page=rent');
     } else {
-      header('Location: index.php?page=rent&err=err');
+      header('Location: index.php?err=err');
     }
 }
 
