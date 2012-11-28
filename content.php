@@ -5,19 +5,22 @@
       require "add.php";
       break;
     case "delete":
-      require "Delete.php";
+      require "delete.php";
       break;
     case "edit":
-      require "Edit.php";
+      require "edit.php";
       break;
     case "rent":
-      require "Rent.php";
+      require "rent.php";
       break;
     case "return":
-      require "Return.php";
+      require "return.php";
       break;
     case "search":
-      require "Search.php";
+      require "search.php";
+      break;
+    case "newUser":
+      require "newUser.php";
       break;
     default:
       require "login.php";
