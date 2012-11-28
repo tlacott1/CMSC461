@@ -93,29 +93,3 @@ h1
 <div id="footer">
 By Neva Reed, Ross Levin, Tim LaCotti</div>
 </div>
-
-<?php
-
-$checkUser = $_POST["username"];
-$checkPass = $_POST["password"];
-$mysql_user = "rlevin2";
-$mysql_password = "harryhml";
-$mysql_database = "rlevin2";
-
-mysql_connect("studentdb.gl.umbc.edu", $mysql_user, $mysql_password) or die("Can't connect to MySQL.");
-mysql_select_db($mysql_database) or die("Can't connect to database.");
-
-$username_query = mysql_query("SELECT Username FROM user WHERE Username = '$checkUser'") or die(mysql_error());
-
-$password_query = mysql_query("SELECT Username, Password FROM user WHERE Username = '$checkUser'") or die(mysql_error());
-$password_data = mysql_fetch_assoc($password_query);
-
-if (is_null($password_data["Username"])) {
-  print "Not a valid username";
-}else if ($password_data["Password"] == $checkPass) {
-  header('Location: https://userpages.umbc.edu/~nreed2/461/Web Page.php');
-} else {
-  print "Password is invalid";
-}
-
-?>
