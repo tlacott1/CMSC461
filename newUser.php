@@ -1,6 +1,6 @@
 <?php
   if($_GET["msg"] == "userErr") {
-    print "Username can't be blank.";
+    print "Username/Password can't be blank.";
   }else if($_GET["msg"] == "passMismatch") {
       print "Passwords do not match.";
   }else if ($_GET["msg"] == "userExists") {

@@ -25,6 +25,15 @@
     case "getInfo":
       require "getInfo.php";
       break;
+    case "searchPolicy":
+      require "searchPolicy.php";
+      break;
+    case "searchVehicle":
+      require "searchVehicle.php";
+      break;
+    case "searchCustomer":
+      require "searchCustomer.php";
+      break;
     default:
       require "login.php";
       break;
