@@ -7,7 +7,9 @@
   $query = mysql_query("SELECT * FROM Policy WHERE RentalID = '$rentalID'") or die(mysql_error());
   $data = mysql_fetch_assoc($query);
 
-
+  if(isset($_POST["submitEdit"])) {
+    print "hello";
+  }else
   if(empty($data) && !empty($rentalID))
   {
     print "Rental ID does not exist.";
@@ -33,9 +35,6 @@
     echo "<br>";
     echo "<br>";
   }elseif (isset($_POST["editPolicy"])) {
-    if (isset($_POST["submitEdit"])) {
-    print "hello";
-    }
     echo "<form name='input' action='' method='POST'>";
     echo "Cost: ";
     echo "<input type='text' name='cost' value='$data[Cost]'><br>";
