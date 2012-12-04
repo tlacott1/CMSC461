@@ -1,15 +1,21 @@
 <?php
   $rentalID = $_POST["RentalID"];
-  if(empty($rentalID)) {
+
+  if(isset($_POST["submitEdit"])) {
+    $query = mysql_query("UPDATE Policy SET Cost='$_POST[cost]',
+      DateRent='$_POST[dateRented]', DateReturn='$_POST[dateReturn]',
+      Insurance='$_POST[Insurance]' WHERE RentalID=$_POST[id]") or die(mysql_error());
+    print "Database Updated Successfully";
+  }else if(empty($rentalID)) {
     print "Please enter a valid Rental ID.";
   }else {
 
-  $query = mysql_query("SELECT * FROM Policy WHERE RentalID = '$rentalID'") or die(mysql_error());
+  $query = mysql_query("SELECT * FROM Policy WHERE RentalID='$rentalID'") or die(mysql_error());
   $data = mysql_fetch_assoc($query);
 
   if(isset($_POST["submitEdit"])) {
     print "hello";
-  }else
+  }
   if(empty($data) && !empty($rentalID))
   {
     print "Rental ID does not exist.";
@@ -35,13 +41,15 @@
     echo "<br>";
     echo "<br>";
   }elseif (isset($_POST["editPolicy"])) {
-    echo "<form name='input' action='' method='POST'>";
+    echo "<form name='editThis' action='' method='POST'>";
+    echo "<input type='hidden' name='id' value='$data[RentalID]'>";
     echo "Cost: ";
     echo "<input type='text' name='cost' value='$data[Cost]'><br>";
     echo "Date Rented: ";
     echo "<input type='text' name='dateRented' value='$data[DateRent]'><br>";
     echo "Date Returned: ";
     echo "<input type='text' name='dateReturn' value='$data[DateReturn]'><br>";
+    echo "Insurance:";
     if($data["Insurance"] == 1) {
       echo "<input type='radio' name='Insurance' value=1 checked='$data[Insurance]'>Yes";
       echo "<input type='radio' name='Insurance' value=0>No<br>";

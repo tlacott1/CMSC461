@@ -12,15 +12,11 @@
 
 <br />
 
-<a class="menuButtons" href="index.php?page=edit">Edit</a>
-
-<br />
-
 <a class="menuButtons" href="index.php?page=delete">Delete</a>
 
 <br />
 
-<a class="menuButtons" href="index.php?page=search">Search</a>
+<a class="menuButtons" href="index.php?page=search">Search/Edit</a>
 
 <br />
 
