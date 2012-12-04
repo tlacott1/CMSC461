@@ -71,4 +71,17 @@ if ($_GET["page"] == "newUser" && $_GET["cmd"] == "register") {
     header('Location: index.php');
   }
 }
+
+/*
+if(isset($_POST["editVehicle"])) {
+    header('Location: index.php?page=editVehicle');
+}
+if(isset($_POST["editCustomer"])) {
+    header('Location: index.php?page=editCustomer');
+}
+if(isset($_POST["editPolicy"])) {
+    header('Location: index.php?page=editPolicy');
+}
+*/
+
 ?>

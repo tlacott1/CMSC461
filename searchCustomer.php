@@ -31,14 +31,14 @@
   $query = mysql_query($queryString) or die(mysql_error());
 
 
-
+  if(isset($_POST["searchCustomer"])) {
   //seventh column
     echo "<div class='cell'>";
     echo "<b>CustomerID</b>" ;
     echo "</div>";
 
-  //first column
-  echo "<div class='cell'>";
+    //first column
+    echo "<div class='cell'>";
     echo "<b>Name</b>" ;
     echo "</div>";
 
@@ -108,6 +108,28 @@
 
     //new row
     echo "<br/>";
+    }
+  }else if(isset($_POST["editCustomer"])) {
+    $data = mysql_fetch_assoc($query);
+    if(empty($data)) {
+      print "Does not exist.";
+    }else {
+      print count($data);
+      echo "Name: ";
+      echo "<input type='text' name='name' value='$data[Name]'><br>";
+      echo "DOB: ";
+      echo "<input type='text' name='dob' value='$data[DOB]'><br>";
+      echo "License Number: ";
+      echo "<input type='text' name='licenseNum' value='$data[LicenseNum]'><br>";
+      echo "Phone Number: ";
+      echo "<input type='text' name='phoneNum' value='$data[PhoneNum]'><br>";
+      echo "Address: ";
+      echo "<input type='text' name='address' value='$data[Address]'><br>";
+      echo "Credit Card: ";
+      echo "<input type='text' name='credit' value='$data[CreditCardNum]'><br>";
+
+      echo "<input type='submit' name='submitEdit' value='Submit Edit'><br><br>";
+    }
   }
 }
 
@@ -119,5 +141,6 @@
   Name: <input type="text" name="Name"><br>
   License #: <input type="text" name="LicenseNum"><br>
 
-  <input type="submit" value="Submit">
+  <input type="submit" name="searchCustomer" value="Search">
+  <input type="submit" name="editCustomer" value="Edit">
 </form>

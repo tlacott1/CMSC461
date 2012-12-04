@@ -34,6 +34,15 @@
     case "searchCustomer":
       require "searchCustomer.php";
       break;
+    case "editVehicle":
+      require "editVehicle.php";
+      break;
+    case "editCustomer":
+      require "editCustomer.php";
+      break;
+    case "editPolicy":
+      require "editPolicy.php";
+      break;
     default:
       require "login.php";
       break;
